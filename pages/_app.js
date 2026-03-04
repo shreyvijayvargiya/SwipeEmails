@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/react";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/globals.css";
 import { store, persistor } from "../lib/store/store";
@@ -39,6 +40,7 @@ const MyApp = ({ Component, pageProps }) => {
 		<QueryClientProvider client={queryClient}>
 			<SEO />
 			{AppComponent}
+			<Analytics />
 			<ToastContainer
 				position="top-right"
 				autoClose={3000}

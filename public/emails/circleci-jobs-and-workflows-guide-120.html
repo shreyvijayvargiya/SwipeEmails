@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CircleCI: Jobs and Workflows Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="max-w-md mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center">
+        <img src="https://static.circleci.com/logos/circleci-logo.svg" alt="CircleCI" class="h-8">
+    </div>
+    <div class="mt-8 text-center">
+        <h1 class="text-2xl font-bold text-gray-900">Concepts critical to success</h1>
+        <p class="mt-4 text-gray-600">Understanding how to optimally set up CircleCI jobs and workflows is critical to success. Here is how you can use them in your pipeline.</p>
+    </div>
+    <div class="mt-8">
+        <img src="https://i.imgur.com/0b48T63.png" alt="Pipeline Diagram" class="mx-auto">
+    </div>
+    <div class="mt-8">
+        <h2 class="text-xl font-semibold text-blue-700">Jobs</h2>
+        <p class="mt-2 text-gray-600">A job is a collection of steps that are executed in a virtual environment. Each job has two required components: <a href="#" class="text-blue-500 hover:underline">steps</a> and <a href="#" class="text-blue-500 hover:underline">executors</a>.</p>
+        <div class="mt-4 bg-gray-100 rounded-md p-4 text-sm font-mono">
+            <pre><code class="text-gray-700">jobs:
+  build:
+    docker:              <span class="text-gray-400"># executor</span>
+      image: foo:bar
+    steps:              <span class="text-gray-400"># steps</span>
+       run: echo Run some tests
+</code></pre>
+        </div>
+        <p class="mt-4 text-gray-600">You can set up optimizations to help speed up your jobs:</p>
+        <ul class="mt-2 list-disc pl-5 text-gray-600">
+            <li><a href="#" class="text-blue-500 hover:underline">Dependency caching</a> - reuse data from expensive fetch operations from previous jobs</li>
+            <li><a href="#" class="text-blue-500 hover:underline">Parallelism</a> - split up your test suite across multiple environments to increase speed</li>
+            <li><a href="#" class="text-blue-500 hover:underline">Resource classes</a> - optimize compute power for a given job</li>
+            <li><a href="#" class="text-blue-500 hover:underline">And more optimizations</a></li>
+        </ul>
+    </div>
+    <div class="mt-8">
+        <h2 class="text-xl font-semibold text-blue-700">Workflows</h2>
+        <p class="mt-2 text-gray-600">A workflow is a set of rules for defining a collection of jobs and their run order. Workflows allow you to define and orchestrate how the steps of job execution are run. Some best practices for using workflows:</p>
+        <ul class="mt-2 list-disc pl-5 text-gray-600">
+            <li><a href="#" class="text-blue-500 hover:underline">Optimize for speed</a> - run independent jobs concurrently to speed up build times</li>
+            <li><a href="#" class="text-blue-500 hover:underline">Manual approval jobs</a> - pause a workflow and wait for approval</li>
+            <li><a href="#" class="text-blue-500 hover:underline">Branch-level execution</a> - only run a given set of jobs on specific branches</li>
+        </ul>
+    </div>
+    <div class="mt-4">
+        <img src="https://i.imgur.com/JtF4l0R.png" alt="Example Workflow" class="mx-auto">
+    </div>
+</div>
+</body>
+</html>

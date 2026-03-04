@@ -89,6 +89,23 @@ function inferCategory(filename) {
   return "General";
 }
 
+/** Match HTML file for an image. Supports:
+ * - New format: {image-basename}.html (e.g. welcome-to-bulletin.png → welcome-to-bulletin.html)
+ * - Old format: {slug}-{index}.html (e.g. ant-man-quantumania-marketing-email-12.html for index 12)
+ */
+function findHtmlForImage(emailsDir, imageBasename, imageIndex) {
+  const newFormat = `${imageBasename}.html`;
+  const newPath = path.join(emailsDir, newFormat);
+  if (fs.existsSync(newPath)) return newFormat;
+
+  const htmlFiles = fs.readdirSync(emailsDir).filter((f) => f.endsWith(".html"));
+  const oldMatch = htmlFiles.find((f) => {
+    const m = f.match(/^(.+)-(\d+)\.html$/);
+    return m && parseInt(m[2], 10) === imageIndex;
+  });
+  return oldMatch || null;
+}
+
 function main() {
   const emailsDir = path.join(process.cwd(), "public", "emails");
   const outputPath = path.join(process.cwd(), "public", "emails.json");
@@ -114,36 +131,31 @@ function main() {
   }
 
   const files = fs.readdirSync(emailsDir);
-  const images = files
-    .filter(isImageFile)
-    .sort((a, b) => a.localeCompare(b))
-    .map((filename) => {
-      const src = `/emails/${encodeURIComponent(filename)}`;
-      const basename = path.basename(filename, path.extname(filename));
-      const htmlFilename = `${basename}.html`;
-      const htmlPath = path.join(emailsDir, htmlFilename);
+  const imageFiles = files.filter(isImageFile).sort((a, b) => a.localeCompare(b));
+  const images = imageFiles.map((filename, index) => {
+    const src = `/emails/${encodeURIComponent(filename)}`;
+    const basename = path.basename(filename, path.extname(filename));
+    const htmlFilename = findHtmlForImage(emailsDir, basename, index);
 
-      const existing = existingByFilename[filename];
-      const entry = existing
-        ? { ...existing }
-        : {
-            name: filenameToName(filename),
-            category: inferCategory(filename),
-            src,
-          };
+    const existing = existingByFilename[filename];
+    const entry = existing
+      ? { ...existing }
+      : {
+          name: filenameToName(filename),
+          category: inferCategory(filename),
+          src,
+        };
 
-      // Ensure src is set (in case existing had different encoding)
-      entry.src = src;
+    entry.src = src;
 
-      // Add or update htmlSrc when HTML file exists; remove if missing
-      if (fs.existsSync(htmlPath)) {
-        entry.htmlSrc = `/emails/${encodeURIComponent(htmlFilename)}`;
-      } else if (entry.htmlSrc) {
-        delete entry.htmlSrc;
-      }
+    if (htmlFilename) {
+      entry.htmlSrc = `/emails/${encodeURIComponent(htmlFilename)}`;
+    } else if (entry.htmlSrc) {
+      delete entry.htmlSrc;
+    }
 
-      return entry;
-    });
+    return entry;
+  });
 
   const manifest = {
     generatedAt: new Date().toISOString(),

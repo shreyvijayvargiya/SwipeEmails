@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T03:34:11.643Z",
+  "generatedAt": "2026-03-04T03:39:32.412Z",
   "count": 522,
   "categories": [
     "Onboarding",
@@ -15,417 +15,500 @@
     {
       "name": "Scroll Nu Al Door 2019",
       "category": "General",
-      "src": "/emails/-scroll-nu-al-door-2019-.png"
+      "src": "/emails/-scroll-nu-al-door-2019-.png",
+      "htmlSrc": "/emails/e-village-2019-highlights-email-0.html"
     },
     {
       "name": "Welcome To Bulletin",
       "category": "Onboarding",
-      "src": "/emails/-welcome-to-bulletin.png"
+      "src": "/emails/-welcome-to-bulletin.png",
+      "htmlSrc": "/emails/daily-dose-of-informative-articles-1.html"
     },
     {
       "name": "Your Secret Valentine With Holiday Newsletter Ideas",
       "category": "Marketing",
-      "src": "/emails/-your-secret-valentine-with-holiday-newsletter-ideas.png"
+      "src": "/emails/-your-secret-valentine-with-holiday-newsletter-ideas.png",
+      "htmlSrc": "/emails/valentine-s-day-email-inspirations-2.html"
     },
     {
       "name": "12 Homes At The Center Of It All",
       "category": "General",
-      "src": "/emails/12-homes-at-the-center-of-it-all.png"
+      "src": "/emails/12-homes-at-the-center-of-it-all.png",
+      "htmlSrc": "/emails/destination-vacation-home-rentals-3.html"
     },
     {
       "name": "4 Ways To Use Creativity For Good",
       "category": "General",
-      "src": "/emails/4-ways-to-use-creativity-for-good.png"
+      "src": "/emails/4-ways-to-use-creativity-for-good.png",
+      "htmlSrc": "/emails/create-art-for-social-good-4.html"
     },
     {
       "name": "50 Off Black Friday Drops Now",
       "category": "Marketing",
-      "src": "/emails/50-off-black-friday-drops-now.png"
+      "src": "/emails/50-off-black-friday-drops-now.png",
+      "htmlSrc": "/emails/adidas-black-friday-deals-email-5.html"
     },
     {
       "name": "A Great Gift For Anyone This Holiday Season",
       "category": "Marketing",
-      "src": "/emails/a-great-gift-for-anyone-this-holiday-season.png"
+      "src": "/emails/a-great-gift-for-anyone-this-holiday-season.png",
+      "htmlSrc": "/emails/seagate-one-touch-ssd-drive-6.html"
     },
     {
       "name": "A Perfect Planet",
       "category": "General",
-      "src": "/emails/a-perfect-planet.png"
+      "src": "/emails/a-perfect-planet.png",
+      "htmlSrc": "/emails/explore-david-attenborough-s-perfect-planet-7.html"
     },
     {
       "name": "A Sneak Peek Just For You",
       "category": "General",
-      "src": "/emails/a-sneak-peek-just-for-you.png"
+      "src": "/emails/a-sneak-peek-just-for-you.png",
+      "htmlSrc": "/emails/disney-so-much-excitement-ahead-8.html"
     },
     {
       "name": "Accessibility Matters",
       "category": "General",
-      "src": "/emails/accessibility-matters.png"
+      "src": "/emails/accessibility-matters.png",
+      "htmlSrc": "/emails/litmus-weekly-email-newsletter-9.html"
     },
     {
       "name": "Alstublieft De Nieuwe Wegwijs In Arbeidsvoorwaarden",
       "category": "General",
-      "src": "/emails/alstublieft-de-nieuwe-wegwijs-in-arbeidsvoorwaarden.png"
+      "src": "/emails/alstublieft-de-nieuwe-wegwijs-in-arbeidsvoorwaarden.png",
+      "htmlSrc": "/emails/arbeidsvoorwaarden-2021-guide-newsletter-10.html"
     },
     {
       "name": "An Egg Cellent Easter Basket For You",
       "category": "Marketing",
-      "src": "/emails/an-egg-cellent-easter-basket-for-you.png"
+      "src": "/emails/an-egg-cellent-easter-basket-for-you.png",
+      "htmlSrc": "/emails/happy-easter-virtual-egg-basket-11.html"
     },
     {
       "name": "Ant Man And The Wasp Quantumania Now In Theatres",
       "category": "General",
-      "src": "/emails/ant-man-and-the-wasp-quantumania-now-in-theatres.png"
+      "src": "/emails/ant-man-and-the-wasp-quantumania-now-in-theatres.png",
+      "htmlSrc": "/emails/ant-man-quantumania-marketing-email-12.html"
     },
     {
       "name": "Are You Afraid Of The Dark",
       "category": "General",
-      "src": "/emails/are-you-afraid-of-the-dark.png"
+      "src": "/emails/are-you-afraid-of-the-dark.png",
+      "htmlSrc": "/emails/litmus-email-spooky-and-informative-13.html"
     },
     {
       "name": "Bikini Sale Discounts Up To 70 Percent",
       "category": "Marketing",
-      "src": "/emails/bikini-sale-discounts-up-to-70-percent.png"
+      "src": "/emails/bikini-sale-discounts-up-to-70-percent.png",
+      "htmlSrc": "/emails/bikini-sale-mix-match-14.html"
     },
     {
       "name": "Black Friday Burnout Contact The Penguin Hotline",
       "category": "Marketing",
-      "src": "/emails/black-friday-burnout-contact-the-penguin-hotline.png"
+      "src": "/emails/black-friday-burnout-contact-the-penguin-hotline.png",
+      "htmlSrc": "/emails/penguin-hotline-holiday-book-bunch-15.html"
     },
     {
       "name": "Black Friday Offers Are Coming Reveal Your Savings Inside",
       "category": "Marketing",
-      "src": "/emails/black-friday-offers-are-coming-reveal-your-savings-inside.png"
+      "src": "/emails/black-friday-offers-are-coming-reveal-your-savings-inside.png",
+      "htmlSrc": "/emails/bose-black-friday-savings-16.html"
     },
     {
       "name": "Campgrounds With Amenities You Love",
       "category": "General",
-      "src": "/emails/campgrounds-with-amenities-you-love.png"
+      "src": "/emails/campgrounds-with-amenities-you-love.png",
+      "htmlSrc": "/emails/plan-your-next-koa-adventure-17.html"
     },
     {
       "name": "Can You Guess Where Were Going",
       "category": "General",
-      "src": "/emails/can-you-guess-where-were-going.png"
+      "src": "/emails/can-you-guess-where-were-going.png",
+      "htmlSrc": "/emails/guess-where-tom-raffield-is-18.html"
     },
     {
       "name": "Can You See My Screen",
       "category": "General",
-      "src": "/emails/can-you-see-my-screen.png"
+      "src": "/emails/can-you-see-my-screen.png",
+      "htmlSrc": "/emails/christmas-countdown-promotional-campaign-19.html"
     },
     {
       "name": "Caution Great Reads Ahead",
       "category": "Newsletters",
-      "src": "/emails/caution-great-reads-ahead.png"
+      "src": "/emails/caution-great-reads-ahead.png",
+      "htmlSrc": "/emails/united-states-of-books-roadtrip-20.html"
     },
     {
       "name": "Check Out Our Interactive Map",
       "category": "General",
-      "src": "/emails/check-out-our-interactive-map.png"
+      "src": "/emails/check-out-our-interactive-map.png",
+      "htmlSrc": "/emails/explore-perfect-day-at-cococay-21.html"
     },
     {
       "name": "Check Out Your Playstation Highlights For 2019",
       "category": "Newsletters",
-      "src": "/emails/check-out-your-playstation-highlights-for-2019.png"
+      "src": "/emails/check-out-your-playstation-highlights-for-2019.png",
+      "htmlSrc": "/emails/playstation-2019-wrap-up-email-22.html"
     },
     {
       "name": "Cleanse With Benefits",
       "category": "General",
-      "src": "/emails/cleanse-with-benefits.png"
+      "src": "/emails/cleanse-with-benefits.png",
+      "htmlSrc": "/emails/lush-new-skincare-line-23.html"
     },
     {
       "name": "Controversy At Its Most Delicious",
       "category": "General",
-      "src": "/emails/controversy-at-its-most-delicious.png"
+      "src": "/emails/controversy-at-its-most-delicious.png",
+      "htmlSrc": "/emails/hawaiian-pizza-day-with-ooni-24.html"
     },
     {
       "name": "Cowabunga Dude",
       "category": "General",
-      "src": "/emails/cowabunga-dude.png"
+      "src": "/emails/cowabunga-dude.png",
+      "htmlSrc": "/emails/build-your-pizza-online-25.html"
     },
     {
       "name": "Data Compression Fitting The Internet Into The Tubes",
       "category": "General",
-      "src": "/emails/data-compression-fitting-the-internet-into-the-tubes.png"
+      "src": "/emails/data-compression-fitting-the-internet-into-the-tubes.png",
+      "htmlSrc": "/emails/data-compression-obsession-email-26.html"
     },
     {
       "name": "Defeat The Warlock Of Outlook Mountain",
       "category": "General",
-      "src": "/emails/defeat-the-warlock-of-outlook-mountain.gif"
+      "src": "/emails/defeat-the-warlock-of-outlook-mountain.gif",
+      "htmlSrc": "/emails/supermailquest-8-bit-adventure-email-27.html"
     },
     {
       "name": "Discover More With The Bbc",
       "category": "Marketing",
-      "src": "/emails/discover-more-with-the-bbc.png"
+      "src": "/emails/discover-more-with-the-bbc.png",
+      "htmlSrc": "/emails/discover-dynasties-with-the-bbc-28.html"
     },
     {
       "name": "Discover Our Brilliant New Paint Range",
       "category": "Marketing",
-      "src": "/emails/discover-our-brilliant-new-paint-range.png"
+      "src": "/emails/discover-our-brilliant-new-paint-range.png",
+      "htmlSrc": "/emails/goodhome-paint-transform-your-space-29.html"
     },
     {
       "name": "Discover The New Italiano Range",
       "category": "Marketing",
-      "src": "/emails/discover-the-new-italiano-range.png"
+      "src": "/emails/discover-the-new-italiano-range.png",
+      "htmlSrc": "/emails/domino-s-italiano-range-deal-30.html"
     },
     {
       "name": "Emailtees Debut Newsletter",
       "category": "Newsletters",
-      "src": "/emails/emailtees-debut-newsletter.png"
+      "src": "/emails/emailtees-debut-newsletter.png",
+      "htmlSrc": "/emails/apparel-for-email-geeks-31.html"
     },
     {
       "name": "Emailweekly 361 Wordle In Email",
       "category": "Newsletters",
-      "src": "/emails/emailweekly-361-wordle-in-email.png"
+      "src": "/emails/emailweekly-361-wordle-in-email.png",
+      "htmlSrc": "/emails/keyboard-email-weekly-design-32.html"
     },
     {
       "name": "Enter This Castle At Your Own Risk",
       "category": "General",
-      "src": "/emails/enter-this-castle-at-your-own-risk.png"
+      "src": "/emails/enter-this-castle-at-your-own-risk.png",
+      "htmlSrc": "/emails/escape-your-fears-halloween-game-33.html"
     },
     {
       "name": "Estamos Contigo Hasta El Final",
       "category": "General",
-      "src": "/emails/estamos-contigo-hasta-el-final.png"
+      "src": "/emails/estamos-contigo-hasta-el-final.png",
+      "htmlSrc": "/emails/oakley-tour-de-france-edition-34.html"
     },
     {
       "name": "Fantastic Prints In Our Sale",
       "category": "Marketing",
-      "src": "/emails/fantastic-prints-in-our-sale.png"
+      "src": "/emails/fantastic-prints-in-our-sale.png",
+      "htmlSrc": "/emails/protest-winter-sports-outfit-style-35.html"
     },
     {
       "name": "Fast Internet Like Youve Never Seen Before For 50mo",
       "category": "General",
-      "src": "/emails/fast-internet-like-youve-never-seen-before-for-50mo.png"
+      "src": "/emails/fast-internet-like-youve-never-seen-before-for-50mo.png",
+      "htmlSrc": "/emails/gig-internet-and-everything-needed-36.html"
     },
     {
       "name": "Fatbergs The Developed Worlds Most Disgusting Dilemma",
       "category": "General",
-      "src": "/emails/fatbergs-the-developed-worlds-most-disgusting-dilemma.png"
+      "src": "/emails/fatbergs-the-developed-worlds-most-disgusting-dilemma.png",
+      "htmlSrc": "/emails/london-s-sewer-fatberg-obsession-37.html"
     },
     {
       "name": "Feeling Like A Winner",
       "category": "General",
-      "src": "/emails/feeling-like-a-winner.png"
+      "src": "/emails/feeling-like-a-winner.png",
+      "htmlSrc": "/emails/play-surprize-fries-and-win-38.html"
     },
     {
       "name": "Fine Tuning Your Html Typography For Mobile",
       "category": "General",
-      "src": "/emails/fine-tuning-your-html-typography-for-mobile.png"
+      "src": "/emails/fine-tuning-your-html-typography-for-mobile.png",
+      "htmlSrc": "/emails/mobile-typography-email-design-guide-39.html"
     },
     {
       "name": "Get Set For Summer With Bang Olufsen",
       "category": "General",
-      "src": "/emails/get-set-for-summer-with-bang-olufsen.png"
+      "src": "/emails/get-set-for-summer-with-bang-olufsen.png",
+      "htmlSrc": "/emails/upgrade-your-sound-systems-40.html"
     },
     {
       "name": "Get To Know Your Body",
       "category": "General",
-      "src": "/emails/get-to-know-your-body.png"
+      "src": "/emails/get-to-know-your-body.png",
+      "htmlSrc": "/emails/weigh-to-go-scale-guide-41.html"
     },
     {
       "name": "Good News Were Switching Things Up",
       "category": "General",
-      "src": "/emails/good-news-were-switching-things-up.png"
+      "src": "/emails/good-news-were-switching-things-up.png",
+      "htmlSrc": "/emails/good-news-update-interactive-format-42.html"
     },
     {
       "name": "Got A 12 Foot Skeleton In Your Email Closet",
       "category": "General",
-      "src": "/emails/got-a-12-foot-skeleton-in-your-email-closet-.png"
+      "src": "/emails/got-a-12-foot-skeleton-in-your-email-closet-.png",
+      "htmlSrc": "/emails/spooked-about-email-fall-edition-43.html"
     },
     {
       "name": "Grid Master The Wait Is Over",
       "category": "General",
-      "src": "/emails/grid-master-the-wait-is-over.png"
+      "src": "/emails/grid-master-the-wait-is-over.png",
+      "htmlSrc": "/emails/dive-into-grid-master-now-44.html"
     },
     {
       "name": "Guess The Book Titles Based On Emojis",
       "category": "General",
-      "src": "/emails/guess-the-book-titles-based-on-emojis.png"
+      "src": "/emails/guess-the-book-titles-based-on-emojis.png",
+      "htmlSrc": "/emails/emoji-story-time-challenge-45.html"
     },
     {
       "name": "Guys Do You Even Collagen Pro Tip You Should",
       "category": "General",
-      "src": "/emails/guys-do-you-even-collagen-pro-tip-you-should.png"
+      "src": "/emails/guys-do-you-even-collagen-pro-tip-you-should.png",
+      "htmlSrc": "/emails/hims-the-ultimate-finishing-move-46.html"
     },
     {
       "name": "Happy Holidays From The Monks",
       "category": "Marketing",
-      "src": "/emails/happy-holidays-from-the-monks.png"
+      "src": "/emails/happy-holidays-from-the-monks.png",
+      "htmlSrc": "/emails/holiday-stop-share-alert-47.html"
     },
     {
       "name": "Happy Holidays We Made You A Game Want To Play",
       "category": "Marketing",
-      "src": "/emails/happy-holidays-we-made-you-a-game-want-to-play.png"
+      "src": "/emails/happy-holidays-we-made-you-a-game-want-to-play.png",
+      "htmlSrc": "/emails/taco-bell-holiday-board-game-48.html"
     },
     {
       "name": "Have A Read Of This You Could Learn A Latte",
       "category": "Newsletters",
-      "src": "/emails/have-a-read-of-this-you-could-learn-a-latte.png"
+      "src": "/emails/have-a-read-of-this-you-could-learn-a-latte.png",
+      "htmlSrc": "/emails/coffee-machines-for-home-baristas-49.html"
     },
     {
       "name": "Help The Monsters Have Attacked The City",
       "category": "General",
-      "src": "/emails/help-the-monsters-have-attacked-the-city.png"
+      "src": "/emails/help-the-monsters-have-attacked-the-city.png",
+      "htmlSrc": "/emails/monster-invasion-email-game-50.html"
     },
     {
       "name": "Help Us With Your Expertise",
       "category": "Feedback",
-      "src": "/emails/help-us-with-your-expertise.png"
+      "src": "/emails/help-us-with-your-expertise.png",
+      "htmlSrc": "/emails/saas-email-marketing-use-cases-51.html"
     },
     {
       "name": "Hi Smiles Davis Checkout The First Ever Spooky Email",
       "category": "Onboarding",
-      "src": "/emails/hi-smiles-davis-checkout-the-first-ever-spooky-email.gif"
+      "src": "/emails/hi-smiles-davis-checkout-the-first-ever-spooky-email.gif",
+      "htmlSrc": "/emails/horror-email-annabelle-creation-52.html"
     },
     {
       "name": "Hi Smiles Davis Witching You Happy Halloween",
       "category": "Onboarding",
-      "src": "/emails/hi-smiles-davis-witching-you-happy-halloween.gif"
+      "src": "/emails/hi-smiles-davis-witching-you-happy-halloween.gif",
+      "htmlSrc": "/emails/spooky-halloween-email-template-download-53.html"
     },
     {
       "name": "Hint The Only Way Out Is Through",
       "category": "General",
-      "src": "/emails/hint-the-only-way-out-is-through.png"
+      "src": "/emails/hint-the-only-way-out-is-through.png",
+      "htmlSrc": "/emails/a-maze-ing-escape-pair-of-thieves-54.html"
     },
     {
       "name": "Hueligan Your Match Is Waiting",
       "category": "General",
-      "src": "/emails/hueligan-your-match-is-waiting.png"
+      "src": "/emails/hueligan-your-match-is-waiting.png",
+      "htmlSrc": "/emails/find-your-perfect-huel-match-55.html"
     },
     {
       "name": "Infographic Steps 1771864829606",
       "category": "General",
-      "src": "/emails/infographic-steps-1771864829606.png"
+      "src": "/emails/infographic-steps-1771864829606.png",
+      "htmlSrc": "/emails/easy-template-setup-steps-56.html"
     },
     {
       "name": "Introducing Google Pixel Buds",
       "category": "Onboarding",
-      "src": "/emails/introducing-google-pixel-buds.png"
+      "src": "/emails/introducing-google-pixel-buds.png",
+      "htmlSrc": "/emails/pixel-buds-wireless-truly-amazing-57.html"
     },
     {
       "name": "Introducing The New Pixel Buds A Series",
       "category": "Onboarding",
-      "src": "/emails/introducing-the-new-pixel-buds-a-series.png"
+      "src": "/emails/introducing-the-new-pixel-buds-a-series.png",
+      "htmlSrc": "/emails/pixel-buds-a-series-email-58.html"
     },
     {
       "name": "Introducing The Tb Summer Monogram Collection",
       "category": "Onboarding",
-      "src": "/emails/introducing-the-tb-summer-monogram-collection.png"
+      "src": "/emails/introducing-the-tb-summer-monogram-collection.png",
+      "htmlSrc": "/emails/burberry-monogram-summer-collection-59.html"
     },
     {
       "name": "Ios 17 Is Here Are You Ready For It",
       "category": "Newsletters",
-      "src": "/emails/ios-17-is-here-are-you-ready-for-it.png"
+      "src": "/emails/ios-17-is-here-are-you-ready-for-it.png",
+      "htmlSrc": "/emails/litmus-news-october-issue-60.html"
     },
     {
       "name": "It S Holiday Season",
       "category": "Marketing",
-      "src": "/emails/it-s-holiday-season.png"
+      "src": "/emails/it-s-holiday-season.png",
+      "htmlSrc": "/emails/holiday-season-family-reunion-game-61.html"
     },
     {
       "name": "Leave A Product Review And Get 100 Membership Points",
       "category": "Marketing",
-      "src": "/emails/leave-a-product-review-and-get-100-membership-points.png"
+      "src": "/emails/leave-a-product-review-and-get-100-membership-points.png",
+      "htmlSrc": "/emails/product-review-for-tahoe-gloves-62.html"
     },
     {
       "name": "Live Expression By Monks For Greeting Christmas",
       "category": "Marketing",
-      "src": "/emails/live-expression-by-monks-for-greeting-christmas.png"
+      "src": "/emails/live-expression-by-monks-for-greeting-christmas.png",
+      "htmlSrc": "/emails/festive-holiday-email-monk-greeting-63.html"
     },
     {
       "name": "Looking For Some Fathers Day Inspiration",
       "category": "General",
-      "src": "/emails/looking-for-some-fathers-day-inspiration.png"
+      "src": "/emails/looking-for-some-fathers-day-inspiration.png",
+      "htmlSrc": "/emails/father-s-day-inspiration-deals-64.html"
     },
     {
       "name": "Make Your Christmas Wish Come True",
       "category": "Marketing",
-      "src": "/emails/make-your-christmas-wish-come-true.png"
+      "src": "/emails/make-your-christmas-wish-come-true.png",
+      "htmlSrc": "/emails/travelodge-christmas-adventure-awaits-65.html"
     },
     {
       "name": "Marketing Mixology Was A Hit",
       "category": "General",
-      "src": "/emails/marketing-mixology-was-a-hit.png"
+      "src": "/emails/marketing-mixology-was-a-hit.png",
+      "htmlSrc": "/emails/post-event-recap-and-resources-66.html"
     },
     {
       "name": "Merry Christmas From 1973 Ltd",
       "category": "Marketing",
-      "src": "/emails/merry-christmas-from-1973-ltd.png"
+      "src": "/emails/merry-christmas-from-1973-ltd.png",
+      "htmlSrc": "/emails/festive-christmas-greetings-from-us-67.html"
     },
     {
       "name": "Miami Grand Prix Weekend Preview",
       "category": "Reviews",
-      "src": "/emails/miami-grand-prix-weekend-preview.png"
+      "src": "/emails/miami-grand-prix-weekend-preview.png",
+      "htmlSrc": "/emails/miami-grand-prix-weekend-update-68.html"
     },
     {
       "name": "More Offers Are Moving To Rewards",
       "category": "Marketing",
-      "src": "/emails/more-offers-are-moving-to-rewards.png"
+      "src": "/emails/more-offers-are-moving-to-rewards.png",
+      "htmlSrc": "/emails/mcdonald-s-rewards-earn-free-food-69.html"
     },
     {
       "name": "Nest Learning Thermostat Eu Announcement",
       "category": "Marketing",
-      "src": "/emails/nest-learning-thermostat-eu-announcement.png"
+      "src": "/emails/nest-learning-thermostat-eu-announcement.png",
+      "htmlSrc": "/emails/nest-learning-thermostat-spotlight-email-70.html"
     },
     {
       "name": "New Arrivals Now Landing",
       "category": "Marketing",
-      "src": "/emails/new-arrivals-now-landing.png"
+      "src": "/emails/new-arrivals-now-landing.png",
+      "htmlSrc": "/emails/oakley-now-boarding-collection-71.html"
     },
     {
       "name": "New New New",
       "category": "Marketing",
-      "src": "/emails/new-new-new.png"
+      "src": "/emails/new-new-new.png",
+      "htmlSrc": "/emails/ugg-new-sneakers-and-giveaway-72.html"
     },
     {
       "name": "One For You One For Your Valentine",
       "category": "Marketing",
-      "src": "/emails/one-for-you-one-for-your-valentine.png"
+      "src": "/emails/one-for-you-one-for-your-valentine.png",
+      "htmlSrc": "/emails/mend-a-broken-heart-design-73.html"
     },
     {
       "name": "Our New 1 Breakfast Is A No Brainer",
       "category": "Marketing",
-      "src": "/emails/our-new-1-breakfast-is-a-no-brainer.png"
+      "src": "/emails/our-new-1-breakfast-is-a-no-brainer.png",
+      "htmlSrc": "/emails/taco-bell-pixel-breakfast-scroll-74.html"
     },
     {
       "name": "Plan Your 2026 With Confidence",
       "category": "General",
-      "src": "/emails/plan-your-2026-with-confidence.png"
+      "src": "/emails/plan-your-2026-with-confidence.png",
+      "htmlSrc": "/emails/plan-your-marketing-with-brevo-75.html"
     },
     {
       "name": "Play A Spooky Halloween Game",
       "category": "Marketing",
-      "src": "/emails/play-a-spooky-halloween-game.png"
+      "src": "/emails/play-a-spooky-halloween-game.png",
+      "htmlSrc": "/emails/disney-halloween-spooky-celebration-76.html"
     },
     {
       "name": "Pre Order Pixel Buds Pro For Immersive Sound",
       "category": "Transactional",
-      "src": "/emails/pre-order-pixel-buds-pro-for-immersive-sound.png"
+      "src": "/emails/pre-order-pixel-buds-pro-for-immersive-sound.png",
+      "htmlSrc": "/emails/pixel-buds-pro-sound-shine-77.html"
     },
     {
       "name": "Qatar Grand Prix Weekend Preview",
       "category": "Reviews",
-      "src": "/emails/qatar-grand-prix-weekend-preview.png"
+      "src": "/emails/qatar-grand-prix-weekend-preview.png",
+      "htmlSrc": "/emails/qatar-grand-prix-countdown-78.html"
     },
     {
       "name": "Quiz Whats Your Ideal Skin Care Setup",
       "category": "Marketing",
-      "src": "/emails/quiz-whats-your-ideal-skin-care-setup.png"
+      "src": "/emails/quiz-whats-your-ideal-skin-care-setup.png",
+      "htmlSrc": "/emails/find-your-perfect-skincare-match-79.html"
     },
     {
       "name": "Quiz Which Shower Scent Fits You Best",
       "category": "General",
-      "src": "/emails/quiz-which-shower-scent-fits-you-best.png"
+      "src": "/emails/quiz-which-shower-scent-fits-you-best.png",
+      "htmlSrc": "/emails/find-your-perfect-scent-match-80.html"
     },
     {
       "name": "Rfrfr001",
       "category": "General",
-      "src": "/emails/rfrfr001.png"
+      "src": "/emails/rfrfr001.png",
+      "htmlSrc": "/emails/simple-email-template-illustration-81.html"
     },
     {
       "name": "Rfrfr003",
       "category": "General",
-      "src": "/emails/rfrfr003.png"
+      "src": "/emails/rfrfr003.png",
+      "htmlSrc": "/emails/upgrade-to-access-all-features-82.html"
     },
     {
       "name": "Rfrfr004",
@@ -435,12 +518,14 @@
     {
       "name": "Rfrfr005",
       "category": "General",
-      "src": "/emails/rfrfr005.png"
+      "src": "/emails/rfrfr005.png",
+      "htmlSrc": "/emails/buffer-s-social-media-newsletter-84.html"
     },
     {
       "name": "Rfrfr006",
       "category": "General",
-      "src": "/emails/rfrfr006.png"
+      "src": "/emails/rfrfr006.png",
+      "htmlSrc": "/emails/grow-your-brand-with-stories-85.html"
     },
     {
       "name": "Rfrfr007",
