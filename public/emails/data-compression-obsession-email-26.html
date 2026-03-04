@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data compression obsession email</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="bg-gray-100 text-gray-700 font-sans antialiased">
+    <div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-6">
+            <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">QUARTZ | Obsession</div>
+            <h1 class="text-3xl font-bold text-gray-900">Data compression</h1>
+            <div class="text-sm text-gray-500 mt-2">October 25, 2019</div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow mb-6 p-6">
+            <h2 class="text-xl font-semibold mb-3">Let's get small</h2>
+            <p class="text-base">Data compression is as old as electronic communication. In A New Kind of Science, <a href="#" class="text-blue-500 hover:underline">Stephen Wolfram writes</a> that "Morse code, invented in 1838 for use in telegraphy, is an early example of data compression based on using shorter codewords for letters such as 'o' and 't' that are more common in English." At the dawn of the computer era, Claude Shannon, the father of information theory, <a href="#" class="text-blue-500 hover:underline">outlined its limits</a>, demonstrating just how far it could go.</p>
+            <p class="text-base mt-3">Since then, some of the world’s best minds have explored just how much information we don’t need, testing the limits of mathematics, computing power, and perception to reduce communication to its essence (technically speaking, anyway). The need continues to increase as streaming video gets more data intensive and more people are taking up a growing share of worldwide internet traffic. It’s the main reason the data going through our pipes is expected to triple from 2018’s figure by 2021, and the world’s biggest tech companies are at work and at war on the next generation of video compression.</p>
+            <p class="text-sm mt-3">Here's a short(ish) possible history:</p>
+            <ul class="list-disc list-inside mt-2">
+                <li><a href="#" class="text-blue-500 hover:underline">Tweet this!</a></li>
+                <li><a href="#" class="text-blue-500 hover:underline">View this detail on the web</a></li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow mb-6 p-6">
+            <h3 class="text-lg font-semibold mb-3">BRIEF HISTORY</h3>
+            <ul class="list-decimal list-inside">
+                <li><span class="font-semibold">1867</span>: Chicago Tribune publisher Joseph Medill argues for eliminating excess letters from the English language, like dropping the "u" in "favorite."</li>
+                <li><span class="font-semibold">1928</span>: RCA's Ray Kell files the first patent for video compression.</li>
+                <li><span class="font-semibold">1934</span>: Tribune publisher Robert R. McCormick, Medill's grandson, institutes compressed spelling rules; some stick ("analog," "canceled"), some don't ("hokey," "doctrin").</li>
+                <li><span class="font-semibold">1948</span>: Claude Shannon and Robert Fano independently discover a technique for lossless compression known as <a href="#" class="text-blue-500 hover:underline">Shannon-Fano coding.</a></li>
+                <li><span class="font-semibold">1991</span>: Fano's student David Huffman pioneers a still-used method called Huffman coding.</li>
+                <li><span class="font-semibold">1973</span>: Naba Ahmed develops Discrete Cosine Transform, used in JPEG and MPEG.</li>
+                <li><span class="font-semibold">1976</span>: Jorma Rosanen and Richard Pasco develop arithmetic coding, used in formats like JPEG and H.264.</li>
+                <li><span class="font-semibold">1977</span>: Abraham Lempel and Jacob Ziv develop dictionary-based coding, which is used in ZIP and GIF formats.</li>
+                <li><span class="font-semibold">1984</span>: 24-year-old Phil Katz invents the ZIP file.</li>
+                <li><span class="font-semibold">1987</span>: CompuGenie introduces GIFs.</li>
+                <li><span class="font-semibold">1993</span>: The JPEG format is introduced, a decade after the Joint Photographic Experts Group is convened to develop a standard for transmitting images electronically; Adobe <a href="#" class="text-blue-500 hover:underline">introduces the PDF.</a></li>
+                <li><span class="font-semibold">1995</span>: The MPEG standard gets its famous .mpg file extension, short for MPEG (Moving Picture Experts Group) Audio Layer III).</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow mb-6">
+            <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover">
+            <div class="p-6">
+                <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">NET POSITIVE</div>
+                <h2 class="text-xl font-semibold mb-3">The 2000s</h2>
+                <p class="text-base">In the new millennium, the slicking stream of information on the internet grew into a powerful river as companies and communication platforms began to irreversibly change society. <a href="#" class="text-blue-500 hover:underline">Read about the human side of the web on Net Positive.</a></p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow mb-6 p-6">
+            <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">EXPLAIN IT LIKE I'M 5</div>
+            <h2 class="text-xl font-semibold mb-3">How does compression work?</h2>
+            <p class="text-base">There are many specific, and often proprietary, types of compression, so let’s focus on two major categories: lossy, and lossless. With <a href="#" class="text-blue-500 hover:underline">lossy compression</a>, you lose some information forever. Take the JPEG image format, which uses both. It begins by converting an RGB (red, green, blue) image to YCbCr. Y is luma, which determines how bright a pixel is; Cb and Cr are the color information. Why? The human eye is more sensitive to brightness than color. You can lose more color information than brightness, so the method separates them and “downsamples” the color, preserving less information about it.</p>
+            <p class="text-base mt-3">Discrete Cosine Transform is then used to “map an image space into a frequency” (pdf). This is where the math gets complicated, though the idea is simple: identify the least necessary information in the picture and get rid of it. Low-frequency parts of the image represent gradual color change, like the sky; high frequency parts represent lots of color changes in a small space, like leaves on a distant tree. Viewers notice if you skimp on the former, less so on the latter. The DCT process identifies what you can safely get rid of. <a href="#" class="text-blue-500 hover:underline">(For visual examples, this is a good video.)</a></p>
+            <p class="text-base mt-3">Next comes quantization. To greatly simplify things, that’s doing math to take what the DCT identified as unnecessary and getting rid of it. That’s the “lossy” part of the compression; you can’t get that data back.</p>
+            <p class="text-base mt-3">Then there's the lossless compression, based in part on David Huffman’s 1951 breakthrough. Data items that occur often in a file are coded with the fewest bits possible. <a href="#" class="text-blue-500 hover:underline">Take this example</a> (pdf): Under the ASCII coding standard, each letter in the phrase “Happy Hip Hop” is represented by eight bits. With Huffman coding, you can represent “h” and “p” with two bits, “a” and “I” with three bits, and so forth, getting a 104-bit phrase down to 36. (It also produces a header or file that allows the computer to translate the Huffman-encoded information, like a secret decoder ring.)</p>
+        </div>
+
+        <div class="bg-gray-700 rounded-lg shadow mb-6">
+             <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover opacity-50">
+             <div class="p-6 text-white">
+                 <div class="font-semibold uppercase text-sm tracking-widest">POP QUIZ</div>
+                 <h2 class="text-xl font-semibold mb-3">Which song was used to perfect the mp3?</h2>
+                 <div class="mt-4 space-y-2">
+                     <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">“Bohemian Rhapsody”, Queen</div>
+                     <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">“Runnin’ with the Devil”, Van Halen</div>
+                     <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">“Tom’s Diner”, Suzanne Vega</div>
+                     <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">“White Lines”, Melle Mel</div>
+                 </div>
+             </div>
+         </div>
+
+        <div class="bg-white rounded-lg shadow mb-6">
+             <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover">
+             <div class="p-6">
+                 <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">PERSON OF INTEREST</div>
+                 <h2 class="text-xl font-semibold mb-3">The queen of compression</h2>
+                 <p class="text-base">In 1972, Lena Söderblom, a Swedish model living in Chicago, was Playboy’s Miss November. Six or seven months later, the staff at the Signal and Image Processing Institute at the University of Southern California wanted an image that was “glossy to ensure good output dynamic range, and they <a href="#"  class="text-blue-500 hover:underline">wanted a human face</a>” (pdf). Someone had the November Playboy on hand, so they scanned her picture, and a legend was born.</p>
+                 <p class="text-base mt-3">The Lena image became a standard to test compression algorithms. It’s more than just a pretty face: it’s "a nice mixture of detail, flat regions, shading, and texture that <a href="#"  class="text-blue-500 hover:underline">do a good job</a> of testing various image processing algorithms." There’s focus (her), dramatic lighting, the tricky feather in her hat, and her reflection in a mirror. Arguably the most important test of an algorithm is to get the human face right.</p>
+                 <p class="text-base mt-3">But the Lena image has fallen out of favor. First, no one cleared the copyright, though Playboy <a href="#"  class="text-blue-500 hover:underline">decided to be chill</a> about research and educational use. Second, potentially important technical information about <a href="#"  class="text-blue-500 hover:underline">how the photo was made and printed</a> was lacking. Finally, the use of a Playboy centerfold, even in SFW form (the photo is suggestive), but Lena bares only her shoulder), was an unwittingly apt representation of the tech world’s attitude toward women—which is why some started using Fabio images instead. As for Lena? Her career took an appropriate turn: she worked as <a href="#"  class="text-blue-500 hover:underline">a model at Kodak</a> to test color film, then <a href="#" class="text-blue-500 hover:underline">taught disabled computer users</a> in her home country.</p>
+             </div>
+         </div>
+
+        <div class="bg-white rounded-lg shadow mb-6 p-6">
+            <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">BY THE DIGITS</div>
+             <ul class="list-none">
+                 <li><span class="font-semibold">33 zettabytes:</span> Size of the “global datasphere” in 2018</li>
+                 <li><span class="font-semibold">175 zettabytes:</span> Estimated size by 2025</li>
+                 <li><span class="font-semibold">73%:</span> Share of internet traffic devoted to video in 2016</li>
+                 <li><span class="font-semibold">82%:</span> Share projected for 2021</li>
+                 <li><span class="font-semibold">70 exabytes:</span> Internet video traffic in 2018</li>
+                 <li><span class="font-semibold">233 exabytes:</span> Projected internet video traffic in 2021</li>
+                 <li><span class="font-semibold">7 gigabytes:</span> Maximum data per hour required to stream 4k Netflix video</li>
+                  <li><span class="font-semibold">20%:</span> Data savings Netflix realized by customizing compression for each title</li>
+                <li><span class="font-semibold">30 terabytes–100 terabytes:</span> Estimate for how much data that the human brain can store</li>
+               <li><span class="font-semibold">4 grams:</span> of DNA required to hold the equivalent of all the data in the world as of 2011</li>
+
+              </ul>
+         </div>
+
+         <div class="bg-blue-800 rounded-lg shadow mb-6 p-6 text-white">
+             <h2 class="text-xl font-semibold mb-3">Have a friend who would enjoy our Obsession with Data compression?</h2>
+              <p class="text-base mb-4">https://qz.com/email/Quartz-obsession-173333317 referred_by=stuffIreallygoodemails.com</p>
+              <div class="font-semibold uppercase text-sm tracking-widest hover:underline cursor-pointer">Forward link to a friend</div>
+         </div>
+
+           <div class="bg-white rounded-lg shadow mb-6">
+               <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover">
+               <div class="p-6">
+                   <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">FUN FACTS</div>
+                   <p class="text-base">A Stanford professor and graduate student consulting on HBO's Silicon Valley came up with a <a href="#"  class="text-blue-500 hover:underline">formula to measure both the quality and speed of compression algorithms</a>—a major plot point in season one—to give the show more tech cred. They called it the Weissman score, and though it's not perfect, it's being used IRL.</p>
+               </div>
+           </div>
+
+         <div class="bg-white rounded-lg shadow mb-6 p-6">
+             <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">WATCH THIS NOW</div>
+             <h2 class="text-xl font-semibold mb-3">The future of compression</h2>
+             <p class="text-base">Video is by far the biggest strain on bandwidth, and it’s only getting bigger. The dominant video codec (coder-decoder) <a href="#"  class="text-blue-500 hover:underline">has been H.264</a>. That was followed by H.265, or HEVC, in 2013. It’s much better at compression (here’s why), but <a href="#"  class="text-blue-500 hover:underline">takeup has been slow</a>. First, it requires more powerful hardware; Apple didn’t go all in on H.265 <a href="#"  class="text-blue-500 hover:underline">until 2017.</a> Licensing fees are also <a href="#"  class="text-blue-500 hover:underline">higher than H.264.</a> Meanwhile, in 2018, tech giants Amazon, Cisco, Google, Intel, Microsoft, Mozilla, and Netflix formed the Alliance for Open Media and released the royalty-free AV1 codec in 2018; in 2019, <a href="#"  class="text-blue-500 hover:underline">GOC tests</a> found that AV1 is competitive with H.265.</p>
+             <p class="text-base mt-3">To make matters more complicated, there’s another next-generation codec on the horizon, VVC, which is expected to be finalized in 2020. The same GOC tests found it to be better at compression than both AV1 and H.265, but it’s not going to be royalty free. Then again, AV1 might not be either. An IP protection company is <a href="#" class="text-blue-500 hover:underline">claiming royalties</a> on any device that uses AV1—which, for example, would add up to $29 million a year for Apple if it adopted the codec. As Jan Ozer writes at Streaming Media, the next dominant video codec could be <a href="#" class="text-blue-500 hover:underline">decided by patent attorneys.</a></p>
+         </div>
+
+         <div class="bg-white rounded-lg shadow mb-6">
+            <div class="relative">
+                <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <svg class="w-16 h-16 text-white opacity-75 cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5.14V19.14L19 12.14 8 5.14Z" />
+                </svg>
+                </div>
+            </div>
+             <div class="p-6">
+                 <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">ARTICLE VIDEO</div>
+                 <h2 class="text-xl font-semibold mb-3">A movie only an algorithm could love</h2>
+                 <p class="text-base">In 2016, Netflix released Meridian, a 12-minute film noir. It got bad reviews, but the target audience engineers who wanted to test codecs and equipment. "It's a weird story wrapped up in a bunch of engineering requirements." <a href="#" class="text-blue-500 hover:underline">Netflix's Chris Fetner said.</a></p>
+             </div>
+         </div>
+
+         <div class="bg-white rounded-lg shadow mb-6 p-6">
+             <div class="font-semibold uppercase text-sm tracking-widest text-gray-500">TAKE ME DOWN THIS ⬇ HOLE!</div>
+             <h2 class="text-xl font-semibold mb-3">Our bits, ourselves</h2>
+             <p class="text-base">One form of data that’s getting in-coded is our most important info: genomic databases. As Dmitri Pavlichin and Taschy Weissman <a href="#" class="text-blue-500 hover:underline">explain in IEEE Spectrum</a>, they contain a lot of redundant data, which—remember Huffman coding!—makes it suited for genome-specific compression that researchers like themselves are working on.</p>
+         </div>
+
+         <div class="bg-gray-700 rounded-lg shadow mb-6">
+             <img src="https://via.placeholder.com/600x300" alt="Placeholder Image" class="rounded-t-lg w-full object-cover opacity-50">
+              <div class="p-6 text-white">
+                  <div class="font-semibold uppercase text-sm tracking-widest">POLL</div>
+                  <h2 class="text-xl font-semibold mb-3">What is your favorite use for compression?</h2>
+                   <div class="mt-4 space-y-2">
+                   <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">Netflix</div>
+                   <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">Spotify</div>
+                    <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">Instagram</div>
+                     <div class="bg-gray-600 hover:bg-gray-500 rounded-md p-3 cursor-pointer">Projections, vinyl, and film for me, thanks</div>
+                 </div>
+              </div>
+          </div>
+
+    </div>
+</div>
+</body>
+</html>

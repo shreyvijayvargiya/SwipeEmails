@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Fuse from "fuse.js";
 
-const GUMROAD_URL =
-	"https://shreyvijayvargiya.gumroad.com/l/email-templates-that-converts";
+const GUMROAD_URL = "https://shreyvijayvargiya.gumroad.com/l/swipe-emails";
 
 const CATEGORY_TAGS = [
 	"All",
@@ -35,35 +34,7 @@ const TICKER_ITEMS = [
 ];
 
 function ImageModal({ image, onClose }) {
-  const [tab, setTab] = useState("preview");
-  const [htmlCode, setHtmlCode] = useState("");
-  const [htmlLoading, setHtmlLoading] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    setTab("preview");
-    setHtmlCode("");
-  }, [image]);
-
-  useEffect(() => {
-    if (!image?.htmlSrc) return;
-    setHtmlLoading(true);
-    fetch(image.htmlSrc)
-      .then((r) => r.text())
-      .then(setHtmlCode)
-      .catch(() => setHtmlCode(""))
-      .finally(() => setHtmlLoading(false));
-  }, [image?.htmlSrc]);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(htmlCode).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
-
   if (!image) return null;
-  const hasHtml = !!image.htmlSrc;
 
   return (
     <motion.div
@@ -88,72 +59,22 @@ function ImageModal({ image, onClose }) {
           ✕
         </button>
 
-        {hasHtml && (
-          <div className="flex border-b border-slate-200">
-            <button
-              onClick={() => setTab("preview")}
-              className={`px-4 py-3 text-sm font-medium ${
-                tab === "preview" ? "text-[#e8ff47] border-b-2 border-[#e8ff47]" : "text-slate-500 hover:text-slate-700"
-              }`}
-              style={{ background: tab === "preview" ? "rgba(0,0,0,0.02)" : "transparent" }}
-            >
-              Preview
-            </button>
-            <button
-              onClick={() => setTab("code")}
-              className={`px-4 py-3 text-sm font-medium ${
-                tab === "code" ? "text-[#e8ff47] border-b-2 border-[#e8ff47]" : "text-slate-500 hover:text-slate-700"
-              }`}
-              style={{ background: tab === "code" ? "rgba(0,0,0,0.02)" : "transparent" }}
-            >
-              Code
-            </button>
-          </div>
-        )}
-
         <div className="flex-1 overflow-auto">
-          {tab === "preview" ? (
-            <>
-              <img
-                src={image.src}
-                alt={image.title || image.name}
-                className="w-full h-auto block"
-                style={{ maxHeight: "90vh" }}
-              />
-              <div className="p-4 text-center">
-                <div className="text-sm font-medium text-slate-700 truncate max-w-full">
-                  {image.title || image.name}
-                </div>
-                {image.description && (
-                  <div className="text-xs text-slate-500 mt-1 max-w-md mx-auto">{image.description}</div>
-                )}
-                <div className="text-xs text-slate-400 mt-0.5">{image.category}</div>
-              </div>
-            </>
-          ) : (
-            <div className="p-4 relative">
-              {htmlLoading ? (
-                <div className="flex justify-center py-12 text-slate-400 font-mono text-sm">Loading...</div>
-              ) : htmlCode ? (
-                <>
-                  <button
-                    onClick={handleCopy}
-                    className="absolute top-6 right-6 px-3 py-1.5 rounded text-xs font-medium cursor-pointer transition-colors"
-                    style={{ background: "#e8ff47", color: "#0a0a08" }}
-                  >
-                    {copied ? "Copied!" : "Copy"}
-                  </button>
-                  <pre className="text-xs font-mono text-slate-700 overflow-x-auto p-4 pr-24 rounded-lg bg-slate-50 max-h-[70vh] overflow-y-auto">
-                    <code>{htmlCode}</code>
-                  </pre>
-                </>
-              ) : (
-                <div className="py-12 text-center text-slate-400 text-sm">
-                  No HTML generated yet. Run <code className="bg-slate-100 px-1 rounded">npm run generate:emails:html</code>
-                </div>
-              )}
+          <img
+            src={image.src}
+            alt={image.title || image.name}
+            className="w-full h-auto block"
+            style={{ maxHeight: "90vh" }}
+          />
+          <div className="p-4 text-center">
+            <div className="text-sm font-medium text-slate-700 truncate max-w-full">
+              {image.title || image.name}
             </div>
-          )}
+            {image.description && (
+              <div className="text-xs text-slate-500 mt-1 max-w-md mx-auto">{image.description}</div>
+            )}
+            <div className="text-xs text-slate-400 mt-0.5">{image.category}</div>
+          </div>
         </div>
       </motion.div>
     </motion.div>
