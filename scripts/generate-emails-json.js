@@ -4,7 +4,8 @@
  * Run: npm run generate:emails
  *
  * Output: public/emails.json — static JSON for client-side use (no fs at runtime).
- * Schema: { name, category, src } per email — clean for AI/LLM consumption.
+ * Merges with existing emails.json: preserves title, description, company, embedding, etc.
+ * Only adds/updates htmlSrc when matching HTML file exists (e.g. image.png → image.html).
  */
 
 const fs = require("fs");
@@ -97,25 +98,62 @@ function main() {
     process.exit(1);
   }
 
+  // Load existing emails.json to preserve title, description, company, embedding, etc.
+  let existingByFilename = {};
+  let existingCategories = CATEGORIES;
+  if (fs.existsSync(outputPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(outputPath, "utf8"));
+      (existing.emails || []).forEach((e) => {
+        const raw = (e.src || "").replace(/^\/emails\//, "");
+        const filename = decodeURIComponent(raw);
+        existingByFilename[filename] = { ...e };
+      });
+      if (existing.categories?.length) existingCategories = existing.categories;
+    } catch (_) {}
+  }
+
   const files = fs.readdirSync(emailsDir);
   const images = files
     .filter(isImageFile)
     .sort((a, b) => a.localeCompare(b))
-    .map((filename) => ({
-      name: filenameToName(filename),
-      category: inferCategory(filename),
-      src: `/emails/${encodeURIComponent(filename)}`,
-    }));
+    .map((filename) => {
+      const src = `/emails/${encodeURIComponent(filename)}`;
+      const basename = path.basename(filename, path.extname(filename));
+      const htmlFilename = `${basename}.html`;
+      const htmlPath = path.join(emailsDir, htmlFilename);
+
+      const existing = existingByFilename[filename];
+      const entry = existing
+        ? { ...existing }
+        : {
+            name: filenameToName(filename),
+            category: inferCategory(filename),
+            src,
+          };
+
+      // Ensure src is set (in case existing had different encoding)
+      entry.src = src;
+
+      // Add or update htmlSrc when HTML file exists; remove if missing
+      if (fs.existsSync(htmlPath)) {
+        entry.htmlSrc = `/emails/${encodeURIComponent(htmlFilename)}`;
+      } else if (entry.htmlSrc) {
+        delete entry.htmlSrc;
+      }
+
+      return entry;
+    });
 
   const manifest = {
     generatedAt: new Date().toISOString(),
     count: images.length,
-    categories: CATEGORIES,
+    categories: existingCategories,
     emails: images,
   };
 
   fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2), "utf8");
-  console.log(`✓ Generated public/emails.json with ${images.length} templates`);
+  console.log(`✓ Generated public/emails.json with ${images.length} templates (existing data preserved)`);
 }
 
 main();

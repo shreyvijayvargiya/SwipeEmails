@@ -16,7 +16,8 @@
 		"lint": "next lint",
 		"seed": "node scripts/seed-database.js",
 		"generate:emails": "node scripts/generate-emails-json.js",
-		"generate:emails:ai": "node scripts/generate-emails-with-embeddings.js"
+		"generate:emails:ai": "node scripts/generate-emails-with-embeddings.js",
+		"generate:emails:html": "node scripts/generate-html-from-images.js"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.11.0",

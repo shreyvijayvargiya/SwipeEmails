@@ -9,7 +9,7 @@
  *   VISION_MODEL=meta-llama/llama-3.2-90b-vision-instruct:free npm run generate:emails:html  # try free (may 404)
  *
  * Requires: OPENROUTER_API_KEY in .env.local
- * Output: public/emails/{slug}.html + htmlSrc added to emails.json
+ * Output: public/emails/{image-name}.html (by image filename) + htmlSrc added to emails.json
  */
 
 const fs = require("fs");
@@ -44,14 +44,6 @@ function getMimeType(filename) {
   const ext = path.extname(filename).toLowerCase();
   const mimes = { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".gif": "image/gif", ".webp": "image/webp" };
   return mimes[ext] || "image/png";
-}
-
-function slugify(str) {
-  return (str || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 60) || "template";
 }
 
 function parseArgs() {
@@ -151,7 +143,8 @@ async function main() {
     }
 
     const base64 = fs.readFileSync(imagePath).toString("base64");
-    const slug = slugify(email.title || email.name) + "-" + i;
+    const imageBasename = path.basename(decodedFilename, path.extname(decodedFilename));
+    const htmlFilename = `${imageBasename}.html`;
 
     process.stdout.write(`[${i + 1}/${emails.length}] ${email.title || email.name}... `);
 
@@ -170,10 +163,10 @@ ${html}
 </body>
 </html>`;
 
-      const outPath = path.join(outputDir, `${slug}.html`);
+      const outPath = path.join(outputDir, htmlFilename);
       fs.writeFileSync(outPath, fullHtml, "utf8");
-      email.htmlSrc = `/emails/${slug}.html`;
-      console.log(`✓ ${slug}.html`);
+      email.htmlSrc = `/emails/${encodeURIComponent(htmlFilename)}`;
+      console.log(`✓ ${htmlFilename}`);
     } catch (err) {
       console.log(`✗ ${err.message}`);
     }
@@ -182,7 +175,7 @@ ${html}
   }
 
   fs.writeFileSync(emailsJsonPath, JSON.stringify(data, null, 2), "utf8");
-  console.log(`\n✓ Done. Generated templates in public/emails/ and updated emails.json\n`);
+  console.log(`\n✓ Done. HTML files in public/emails/ and htmlSrc added to emails.json\n`);
 }
 
 main().catch((err) => {

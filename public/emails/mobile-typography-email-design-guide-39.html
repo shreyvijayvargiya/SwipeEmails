@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Typography Email Design Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="container mx-auto px-4 py-8">
+
+  <h1 class="text-4xl font-bold text-red-600 mb-4">Type E:</h1>
+  <p class="text-gray-700 mb-4">07. The Mobile Issue</p>
+
+  <img src="your-image-url.jpg" alt="iPhone" class="w-full rounded-md mb-4">
+
+  <p class="text-gray-700 mb-4">2017 marks the 10th anniversary of the iPhone.</p>
+  
+  <p class="text-gray-700 mb-4">The percentage of subscribers that open their emails on their mobile device continues to remain high, and HTML typography plays an important part in ensuring their mobile experience is a great experience.</p>
+
+  <p class="text-gray-700 mb-4">In this issue, I'll look at a few techniques to help you fine-tune your HTML typography for mobile.</p>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Lay out your content within a single column grid.</h2>
+    <p class="text-gray-700 mb-4">Lay out your content within a single column grid, stacking each element - the headline, subheadings, paragraphs of text, lists, buttons and images, one above the other. If you're including a data table, ensure its content will fit comfortably within the table data cells.</p>
+    <img src="your-stacked-image.jpg" alt="Stacked content" class="w-full">
+    <p class="text-xs text-gray-500 mt-1">Stacked content within a single column grid.</p>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Insert typographic margins.</h2>
+    <p class="text-gray-700 mb-4">Even when lais out within a single column grid, content can be very difficult to read, particularly a paragraph of text, if it's too close to the edge of a mobile devices' display.</p>
+    
+    <p class="text-gray-700 mb-4">Insert typographic margins, of equal widths, to the left and right-hand sides of the content, using padding, to give it space to 'breathe'.</p>
+    
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+        &lt;td style="padding-left:20px; padding-right:20px;"&gt;
+      </code>
+    </pre>
+    
+    <p class="text-gray-700 mb-4">Inserting typographic margins of 20px, using padding.</p>
+    
+    <img src="your-typographic-margins-image.jpg" alt="Typographic margins example" class="w-full">
+    <p class="text-xs text-gray-500 mt-1">Typographic margins of 20px.</p>
+
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Why use padding for typographic margins and not margin for typographic margins?</h2>
+    <p class="text-gray-700 mb-4">Within the CSS Document Object Model, <code>padding</code> is the property that 'wraps' the content, and as such is the logical property to use for inserting typographic margins. <code>margin</code>, on the other hand, 'wraps' the border, the padding and the content, and while it can be used to insert typographic margins, doing so prevents you from using the <code>border</code> property, should you need to.</p>
+    <img src="your-css-document-object-model.jpg" alt="CSS Document Object Model" class="w-full">
+    <p class="text-xs text-gray-500 mt-1">CSS Document Object Model</p>
+  </div>
+    
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Group related content together.</h2>
+    <p class="text-gray-700 mb-4">Group related content together, and ensure the content in each group is relationally spaced as you scroll down. Subheadings should be closer to the paragraphs of text they relate to than to the content that precedes them. Buttons should be closer to the paragraphs of text they relate to than to the content that follows them. Each group of content should be separated enough to ensure the subscriber understands where it begins and where it ends.</p>
+        
+         <img src="your-grouping-related-content.jpg" alt="Grouping related content" class="w-full">
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <p class="text-gray-700 mb-4">It's particularly important to bear this in mind when you're working with subheadings or paragraphs of text that were previously positioned at the top of a centre, or right-hand column on tablet or desktop. As they're unlikely to have any paragraph spacing above them, you'll need to insert some by applying <code>padding</code> to the top of the <code>&lt;td&gt;</code> or <code>&lt;div&gt;</code> they're contained within, utilising the @media query you're created to trigger responsive styling.</p>
+
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+<![CDATA[
+        @media screen and (max-device-width:575px),
+        screen and (max-width:575px) {
+          .rightColumn {padding-top: 10px !important;}
+        }
+]]>
+      </code>
+    </pre>
+
+    <p class="text-gray-700 mb-4">Inserting paragraph spacing into a right-hand column, using padding, utilising a @media query.</p>
+  </div>
+
+  <div class="bg-red-100 rounded-md p-4 mb-4 flex items-center justify-between">
+    <div>
+      <img src="your-a-type-of-email-logo.png" alt="A Type of email" class="w-32">
+    </div>
+    <div>
+        <p class="text-2xl font-bold text-red-600">10% OFF</p>
+        <p class="text-2xl font-bold text-red-600">A Type of email.</p>
+      <p class="text-sm">Use offer code typee080217*</p>
+      <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        Buy now
+      </button>
+      <p class="text-xs mt-2">*Valid until midnight GMT, 8th February 2017</p>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Reduce the <code>font-size</code> of the headline and subheadings.</h2>
+    <p class="text-gray-700 mb-4">Reduce the <code>font-size</code> of the headline and subheadings to a point where the single column grid can comfortably contain their longest word. If a word is wider than the single column grid, it may break the layout and the mobile experience.</p>
+
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+<![CDATA[
+        @media screen and (max-device-width:575px),
+        screen and (max-width:575px) {
+          h1 {font-size: 50px !important;}
+        }
+]]>
+
+      </code>
+    </pre>
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+        &lt;h1 style="margin:0; font-weight:lighter;"&gt; Headline &lt;/h1&gt;
+      </code>
+    </pre>
+    <p class="text-gray-700 mb-4">Reducing the <code>font-size</code> of a headline, utilising a @media query.</p>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Enlarge the <code>font-size</code> of paragraphs of text.</h2>
+    <p class="text-gray-700 mb-4">Enlarge the <code>font-size</code> of paragraphs of text, so that they're legible on Retina or high-definition displays, which typically reduce their visual size.</p>
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+<![CDATA[
+        @media screen and (max-device-width:575px),
+        screen and (max-width:575px) {
+          p {font-size: 16px !important; line-height:24px !important;}
+        }
+]]>
+      </code>
+    </pre>
+
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+        &lt;p style="margin:0;"&gt; Paragraph of text. &lt;/p&gt;
+      </code>
+    </pre>
+
+    <p class="text-gray-700 mb-4">Enlarging the <code>font-size</code> of a paragraph of text, utilising a @media query.</p>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Fix widows.</h2>
+    <p class="text-gray-700 mb-4">A widow is a typographic name for a word that appears on its own, on the last line of a paragraph of text. The space it creates to its right, combined with the paragraph space that follows it, can disrupt the subscriber's flow, as they read down the email.</p>
+    <img src="your-widows-image.jpg" alt="Paragraph of text with a potential widow at the end." class="w-full">
+
+    <p class="text-gray-700 mb-4">Paragraph of text with a potential widow at the end.</p>
+
+    <p class="text-gray-700 mb-4">To fix a widow, join the penultimate word in the paragraph of text to the widow using a non-breaking space (<code>&amp;nbsp;</code>). This will force the last two words to appear together, and so resolve the occurrence of the widow.</p>
+
+    <pre class="bg-red-100 text-xs p-2 rounded-md mb-2">
+      <code class="text-xs">
+        &lt;p style="margin:0;"&gt; Paragraph of text with a potential widow at &amp;nbsp; end. &lt;/p&gt;
+      </code>
+    </pre>
+    <p class="text-gray-700 mb-4">Joining the penultimate word to the widow with a &amp;nbsp; .</p>
+
+    <img src="your-widows-fixed-image.jpg" alt="Paragraph of text with a potential widow at the end." class="w-full">
+    <p class="text-gray-700 mb-4">Paragraph of text with a potential widow at the end.</p>
+
+    <p class="text-gray-700 mb-4">Where I would be wary of applying this technique, and where your typographic judgement comes into play, is when the penultimate word in the paragraph of text is a long word, and fixing the widow creates a space on the penultimate line of the paragraph of text, that's more disruptive than the original space it created. In such instances, I would recommend that you either edit the text, or leave the widow alone.</p>
+    <img src="your-long-widow.jpg" alt="Paragraph of text with a long penultimate word." class="w-full">
+
+    <p class="text-gray-700 mb-4">Paragraph of text with a long penultimate word.</p>
+
+    <p class="text-gray-700 mb-4">The 'widow fix' works best on short words. You can identify potential widows quickly, using your browser, and on testing tools such as <a href="#">Litmus</a> or <a href="#">Email on Acid</a>.</p>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Align text left.</h2>
+    <p class="text-gray-700 mb-4">Paragraphs of text are much easier to read when they're aligned left, as the eye has a point of reference to start reading each new line. There's a tendency to centre paragraphs of text on mobile, and while this is acceptable on the headline, subheadings and buttons, it creates difficulties elsewhere.</p>
+    <img src="your-text-left-alignment.jpg" alt="Aligning text left." class="w-full">
+    <p class="text-xs text-gray-500 mt-1">Aligning text left.</p>
+  </div>
+
+  <div class="bg-gray-100 rounded-md p-4 mb-4">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Fix Apple Links.</h2>
+    <p class="text-gray-700 mb-4">While I covered this in the <a href="#">'Blue Link Issue'</a>, there's been some changes in the styling of these links in iOS 10. Some links that used to be rendered as 'Blue Links' are now rendered as 'Grey Links', but the same technique applies in restyling and disabling them.</p>
+  </div>
+
+  <p class="text-gray-700 mb-4">In addition to these techniques, there are other ways in which you can enhance the subscriber's mobile experience, by featuring web fonts for example, or leveraging a device's call functionality. Ensure you keep the subscriber at the forefront of your design and development process, and test on real devices as well as on testing tools such as <a href="#">Litmus</a> or <a href="#">Email on Acid</a>, so that your experience reflects theirs.</p>
+
+  <div class="bg-gray-800 text-white rounded-md p-4 mt-8">
+    <p class="text-sm">
+      <strong>Type E:</strong> is an email newsletter devoted to typography in email, created by Email Designer and Developer, Paul Airy. Please <a href="#">email your thoughts, suggestions and questions.</a> Thank you for subscribing!
+    </p>
+  </div>
+
+  <div class="mt-8">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">Beyond the Envelope™</h2>
+    <p class="text-sm text-gray-700">© Paul Airy, 2017</p>
+    <p class="text-sm text-gray-700">+44 (0) 7962 177 477 (International)</p>
+    <p class="text-sm text-gray-700">07962 177 477 (UK)</p>
+    <p class="text-sm text-gray-700"><a href="#">email_airy</a></p>
+
+    <p class="text-sm text-gray-700 mt-4"><a href="#">Unsubscribe from the Type:E mailing list.</a></p>
+    <p class="text-sm text-gray-700 mt-4"><a href="#">Manage your preferences.</a></p>
+    <p class="text-sm text-gray-700"><a href="#">View this email online.</a></p>
+    <p class="text-sm text-gray-700">If you want to <a href="#">sayhello@me</a>, you know where to reach me!</p>
+  </div>
+
+</div>
+</body>
+</html>
