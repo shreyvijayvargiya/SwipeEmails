@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { onboardingSteps } from "../data";
+import Icon from "../Icon";
+import { onboardingSteps } from "../../data";
 
 export default function OnboardingPage() {
 	const doneCount = onboardingSteps.filter((s) => s.done).length;

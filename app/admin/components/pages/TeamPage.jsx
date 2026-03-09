@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { teamMembers } from "../data";
+import Icon from "../Icon";
+import { teamMembers } from "../../data";
 
 export default function TeamPage() {
 	return (

@@ -1,5 +1,5 @@
-import { supportTickets } from "../data";
-import Icon from "./Icon";
+import { supportTickets } from "../../data";
+import Icon from "../Icon";
 
 export default function SupportPage() {
 	return (

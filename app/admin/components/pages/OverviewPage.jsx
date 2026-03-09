@@ -12,9 +12,9 @@ import {
 	Pie,
 	Cell,
 } from "recharts";
-import Icon from "./Icon";
-import CustomTooltip from "./CustomTooltip";
-import { revenueData, visitorData, planData, users } from "../data";
+import Icon from "../Icon";
+import CustomTooltip from "../CustomTooltip";
+import { revenueData, visitorData, planData, users } from "../../data";
 
 export default function OverviewPage() {
 	const stats = [

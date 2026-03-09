@@ -13,9 +13,9 @@ import {
 	Pie,
 	Cell,
 } from "recharts";
-import Icon from "./Icon";
-import CustomTooltip from "./CustomTooltip";
-import { revenueData, visitorData, planData } from "../data";
+import Icon from "../Icon";
+import CustomTooltip from "../CustomTooltip";
+import { revenueData, visitorData, planData } from "../../data";
 
 export default function AnalyticsPage() {
 	const [period, setPeriod] = useState("12m");
@@ -265,7 +265,7 @@ export default function AnalyticsPage() {
 						Visit → Signup → Trial → Paid conversion
 					</div>
 				</div>
-				<div style={{ display: "flex", gap: 16, marginTop: 8 }}>
+				<div className="funnel-row" style={{ display: "flex", gap: 16, marginTop: 8, flexWrap: "wrap" }}>
 					{[
 						{
 							stage: "Visitors",

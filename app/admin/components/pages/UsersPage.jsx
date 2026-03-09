@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Icon from "./Icon";
-import UserDrawer from "./UserDrawer";
-import { users } from "../data";
+import Icon from "../Icon";
+import UserDrawer from "../UserDrawer";
+import { users } from "../../data";
 
 export default function UsersPage() {
 	const [search, setSearch] = useState("");
@@ -45,10 +45,8 @@ export default function UsersPage() {
 					</button>
 				</div>
 			</div>
-			<div
-				style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap" }}
-			>
-				<div className="search-bar" style={{ width: 260 }}>
+			<div className="filter-row" style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
+				<div className="search-bar filter-search" style={{ width: 260, minWidth: 0 }}>
 					<Icon name="search" size={13} />
 					<input
 						value={search}

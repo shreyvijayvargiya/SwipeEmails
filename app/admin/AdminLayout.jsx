@@ -1,23 +1,25 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import CommandPalette from "./components/CommandPalette";
-import {
-	OverviewPage,
-	AnalyticsPage,
-	UsersPage,
-	BillingPage,
-	RoadmapPage,
-	SupportPage,
-	AffiliatesPage,
-	TeamPage,
-	AuditLogsPage,
-	OnboardingPage,
-	NotificationsPage,
-	SettingsPage,
-} from "./components";
-import { notifications } from "./data";
 import Icon from "./components/Icon";
+import { notifications } from "./data";
 
-const pageTitles = {
+const ROUTES = [
+	{ id: "overview", path: "/admin", label: "Overview", icon: "home" },
+	{ id: "analytics", path: "/admin/analytics", label: "Analytics", icon: "chart" },
+	{ id: "users", path: "/admin/users", label: "Users", icon: "users" },
+	{ id: "billing", path: "/admin/billing", label: "Billing", icon: "billing" },
+	{ id: "roadmap", path: "/admin/roadmap", label: "Roadmap", icon: "roadmap" },
+	{ id: "support", path: "/admin/support", label: "Support", icon: "support" },
+	{ id: "affiliates", path: "/admin/affiliates", label: "Affiliates", icon: "affiliate" },
+	{ id: "team", path: "/admin/team", label: "Team", icon: "team" },
+	{ id: "audit", path: "/admin/audit", label: "Audit Logs", icon: "audit" },
+	{ id: "onboarding", path: "/admin/onboarding", label: "Getting Started", icon: "onboarding" },
+	{ id: "notifications", path: "/admin/notifications", label: "Notifications", icon: "bell" },
+	{ id: "settings", path: "/admin/settings", label: "Settings", icon: "settings" },
+];
+
+const PAGE_TITLES = {
 	overview: "Overview",
 	analytics: "Analytics",
 	users: "Users & Customers",
@@ -32,28 +34,18 @@ const pageTitles = {
 	settings: "Settings",
 };
 
-const PAGES = {
-	overview: OverviewPage,
-	analytics: AnalyticsPage,
-	users: UsersPage,
-	billing: BillingPage,
-	roadmap: RoadmapPage,
-	support: SupportPage,
-	affiliates: AffiliatesPage,
-	team: TeamPage,
-	audit: AuditLogsPage,
-	onboarding: OnboardingPage,
-	notifications: NotificationsPage,
-	settings: SettingsPage,
-};
-
-export default function AdminApp() {
-	const [page, setPage] = useState("overview");
+export default function AdminLayout({ children, pageTitle }) {
+	const router = useRouter();
 	const [sidebarOpen, setSidebarOpen] = useState(true);
 	const [theme, setTheme] = useState("dark");
 	const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 	const unreadNotifs = notifications.filter((n) => !n.read).length;
+
+	const path = router.asPath || "";
+	const currentPage = path.replace("/admin", "").replace(/\/$/, "") || "";
+	const activeId = currentPage === "" ? "overview" : currentPage.slice(1);
+	const title = pageTitle || PAGE_TITLES[activeId] || "Overview";
 
 	useEffect(() => {
 		const stored = localStorage.getItem("admin-theme");
@@ -87,43 +79,31 @@ export default function AdminApp() {
 		return () => mq.removeEventListener("change", handler);
 	}, []);
 
-	const handleNavClick = (id) => {
-		setPage(id);
+	const handleNavClick = (path) => {
+		router.push(path);
 		if (isMobile) setSidebarOpen(false);
 	};
 
-	const navItems = [
-		{ id: "overview", label: "Overview", icon: "home" },
-		{ id: "analytics", label: "Analytics", icon: "chart" },
-		{ id: "users", label: "Users", icon: "users" },
-		{ id: "billing", label: "Billing", icon: "billing" },
-		{ id: "roadmap", label: "Roadmap", icon: "roadmap" },
-		{ id: "support", label: "Support", icon: "support" },
-		{ id: "affiliates", label: "Affiliates", icon: "affiliate" },
-		{ id: "team", label: "Team", icon: "team" },
-		{ id: "audit", label: "Audit Logs", icon: "audit" },
-		{ id: "onboarding", label: "Getting Started", icon: "onboarding" },
-		{
-			id: "notifications",
-			label: "Notifications",
-			icon: "bell",
-			badge: unreadNotifs,
-		},
-		{ id: "settings", label: "Settings", icon: "settings" },
-	];
+	const handleCommandNavigate = (id) => {
+		const route = ROUTES.find((r) => r.id === id);
+		if (route) {
+			router.push(route.path);
+			setCommandPaletteOpen(false);
+			if (isMobile) setSidebarOpen(false);
+		}
+	};
 
-	const PageComponent = PAGES[page] || OverviewPage;
+	const navItems = ROUTES.map((r) => ({
+		...r,
+		badge: r.id === "notifications" ? unreadNotifs : undefined,
+	}));
 
 	return (
 		<div className="admin-app">
 			<CommandPalette
 				open={commandPaletteOpen}
 				onClose={() => setCommandPaletteOpen(false)}
-				onNavigate={(id) => {
-					setPage(id);
-					setCommandPaletteOpen(false);
-					if (isMobile) setSidebarOpen(false);
-				}}
+				onNavigate={handleCommandNavigate}
 			/>
 			{isMobile && (
 				<div
@@ -158,17 +138,15 @@ export default function AdminApp() {
 					{navItems.map((item) => (
 						<div
 							key={item.id}
-							className={`nav-item ${page === item.id ? "active" : ""}`}
-							onClick={() => handleNavClick(item.id)}
+							className={`nav-item ${activeId === item.id ? "active" : ""}`}
+							onClick={() => handleNavClick(item.path)}
 							title={!sidebarOpen && !isMobile ? item.label : ""}
 						>
 							<span className="nav-icon">
 								<Icon name={item.icon} size={15} />
 							</span>
 							{(sidebarOpen || isMobile) && <span>{item.label}</span>}
-							{item.badge > 0 && (
-								<span className="nav-badge">{item.badge}</span>
-							)}
+							{item.badge > 0 && <span className="nav-badge">{item.badge}</span>}
 						</div>
 					))}
 				</div>
@@ -193,7 +171,7 @@ export default function AdminApp() {
 					>
 						<Icon name={sidebarOpen ? "x" : "menu"} size={14} />
 					</button>
-					<div className="topbar-title">{pageTitles[page]}</div>
+					<div className="topbar-title">{title}</div>
 					<div
 						className="search-bar"
 						onClick={() => setCommandPaletteOpen(true)}
@@ -227,11 +205,11 @@ export default function AdminApp() {
 								<Icon name="moon" size={14} />
 							)}
 						</button>
-						<div className="icon-btn" onClick={() => setPage("notifications")}>
+						<div className="icon-btn" onClick={() => router.push("/admin/notifications")}>
 							<Icon name="bell" size={14} />
 							{unreadNotifs > 0 && <div className="notif-dot" />}
 						</div>
-						<div className="icon-btn" onClick={() => setPage("settings")}>
+						<div className="icon-btn" onClick={() => router.push("/admin/settings")}>
 							<Icon name="settings" size={14} />
 						</div>
 						<div
@@ -248,9 +226,7 @@ export default function AdminApp() {
 						</div>
 					</div>
 				</div>
-				<div className="content">
-					<PageComponent />
-				</div>
+				<div className="content">{children}</div>
 			</div>
 		</div>
 	);

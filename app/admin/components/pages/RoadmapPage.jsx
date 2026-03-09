@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { roadmapItems, changelogEntries } from "../data";
+import { roadmapItems, changelogEntries } from "../../data";
 
 export default function RoadmapPage() {
 	const [items] = useState(roadmapItems);

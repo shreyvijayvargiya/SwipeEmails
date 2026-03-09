@@ -1,5 +1,5 @@
-import { invoices } from "../data";
-import Icon from "./Icon";
+import { invoices } from "../../data";
+import Icon from "../Icon";
 
 export default function BillingPage() {
 	return (

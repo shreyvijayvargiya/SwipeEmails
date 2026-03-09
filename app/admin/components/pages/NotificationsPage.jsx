@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Icon from "./Icon";
-import { notifications } from "../data";
+import Icon from "../Icon";
+import { notifications } from "../../data";
 
 export default function NotificationsPage() {
 	const [notifs, setNotifs] = useState(notifications);

@@ -1150,3 +1150,170 @@
 	border-radius: 4px;
 	transition: width 0.3s ease;
 }
+
+/* ─── ADMIN RESPONSIVE (small devices) ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+	.admin-app .stats-grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+	.admin-app .charts-grid {
+		grid-template-columns: 1fr !important;
+	}
+	.admin-app .charts-grid-3 {
+		grid-template-columns: 1fr !important;
+	}
+	.admin-app .grid-2 {
+		grid-template-columns: 1fr !important;
+	}
+	.admin-app .plan-grid {
+		grid-template-columns: 1fr !important;
+	}
+	.admin-app .settings-grid {
+		grid-template-columns: 1fr !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.admin-app .sidebar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 100;
+		transform: translateX(-100%);
+		transition: transform 0.25s ease, box-shadow 0.25s ease;
+	}
+	.admin-app .sidebar.sidebar-open {
+		transform: translateX(0);
+		box-shadow: 8px 0 24px rgba(0, 0, 0, 0.3);
+	}
+	.admin-app .sidebar-overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 99;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s ease;
+	}
+	.admin-app .sidebar-overlay.sidebar-overlay-visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	.admin-app .topbar {
+		padding: 0 12px;
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+	.admin-app .topbar-title {
+		font-size: 14px;
+		order: 2;
+		width: 100%;
+		flex: none;
+	}
+	.admin-app .search-bar {
+		display: none;
+	}
+	.admin-app .content {
+		padding: 16px;
+	}
+	.admin-app .page-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.admin-app .page-header .btn {
+		width: 100%;
+		justify-content: center;
+	}
+	.admin-app .card-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	.admin-app .card-header .btn {
+		width: 100%;
+	}
+	.admin-app .stats-grid {
+		grid-template-columns: 1fr !important;
+		gap: 12px;
+	}
+	.admin-app .stat-value {
+		font-size: 22px;
+	}
+	.admin-app .user-drawer {
+		width: 100%;
+		max-width: 100%;
+	}
+	.admin-app .kanban-column {
+		min-width: 220px;
+	}
+	.admin-app .funnel-row {
+		flex-direction: column;
+	}
+	.admin-app .funnel-row > div {
+		flex: 1 1 100% !important;
+		min-width: 0;
+	}
+	.admin-app .filter-row {
+		flex-direction: column;
+	}
+	.admin-app .filter-row .filter-search,
+	.admin-app .filter-row .search-bar {
+		width: 100% !important;
+	}
+	.admin-app .filter-row .btn {
+		flex: 1;
+	}
+	.admin-app .filter-row .btn-group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+}
+
+@media (max-width: 480px) {
+	.admin-app .funnel-row > div {
+		min-width: 100%;
+	}
+	.admin-app .topbar-actions .icon-btn {
+		width: 28px;
+		height: 28px;
+	}
+	.admin-app .topbar-actions .avatar {
+		width: 28px;
+		height: 28px;
+		font-size: 11px;
+	}
+	.admin-app .page-title {
+		font-size: 18px;
+	}
+	.admin-app .page-desc {
+		font-size: 11px;
+	}
+	.admin-app .btn {
+		padding: 6px 12px;
+		font-size: 11px;
+	}
+	.admin-app .filter-row {
+		flex-direction: column;
+	}
+	.admin-app .filter-row .search-bar {
+		width: 100%;
+	}
+	.admin-app .filter-row .btn {
+		flex: 1;
+	}
+	.admin-app .plan-price {
+		font-size: 26px;
+	}
+	.admin-app thead th,
+	.admin-app tbody td {
+		padding: 8px 10px;
+		font-size: 11px;
+	}
+	.admin-app .table-wrap {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	}
+}

@@ -1,5 +1,5 @@
-import { auditLogs } from "../data";
-import Icon from "./Icon";
+import { auditLogs } from "../../data";
+import Icon from "../Icon";
 
 export default function AuditLogsPage() {
 	return (

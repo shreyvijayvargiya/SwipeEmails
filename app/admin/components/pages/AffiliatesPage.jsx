@@ -1,5 +1,5 @@
-import { affiliateData } from "../data";
-import Icon from "./Icon";
+import { affiliateData } from "../../data";
+import Icon from "../Icon";
 
 export default function AffiliatesPage() {
 	return (
