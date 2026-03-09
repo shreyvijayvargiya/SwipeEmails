@@ -1,5 +1,5 @@
 {
-	"name": "Email templates",
+	"name": "email-templates",
 	"version": "1.0.0",
 	"description": "Email templates",
 	"main": "pages/index.js",
@@ -20,6 +20,8 @@
 		"generate:emails:html": "node scripts/generate-html-from-images.js"
 	},
 	"dependencies": {
+		"@babel/parser": "^7.29.0",
+		"@codesandbox/sandpack-react": "^2.20.0",
 		"@reduxjs/toolkit": "^2.11.0",
 		"@supabase/supabase-js": "^2.56.0",
 		"@tanstack/react-query": "^5.66.6",

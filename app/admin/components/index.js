@@ -1,0 +1,12 @@
+export { default as OverviewPage } from "./OverviewPage";
+export { default as AnalyticsPage } from "./AnalyticsPage";
+export { default as UsersPage } from "./UsersPage";
+export { default as BillingPage } from "./BillingPage";
+export { default as RoadmapPage } from "./RoadmapPage";
+export { default as SupportPage } from "./SupportPage";
+export { default as AffiliatesPage } from "./AffiliatesPage";
+export { default as TeamPage } from "./TeamPage";
+export { default as AuditLogsPage } from "./AuditLogsPage";
+export { default as OnboardingPage } from "./OnboardingPage";
+export { default as NotificationsPage } from "./NotificationsPage";
+export { default as SettingsPage } from "./SettingsPage";

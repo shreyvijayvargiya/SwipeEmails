@@ -4,6 +4,10 @@ const path = require("path");
 const nextConfig = {
 	outputFileTracingRoot: path.join(__dirname),
 	reactStrictMode: true,
+	// Allow long-running API routes (e.g. generate-admin streaming)
+	experimental: {
+		proxyTimeout: 300000,
+	},
 	poweredByHeader: false,
 	compress: true,
 	images: {
